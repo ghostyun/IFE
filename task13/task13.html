@@ -44,16 +44,18 @@
 
 	 // 判断字符串是否有效
 	 function filter (data) {
-	 	// 记录当前位置
-	 	var n = 0;
-	 	var max = data.length;
-	 	while (data && n < max) {
-	 		// 如果数据不为空
-	 		if( data.substr(n,1) != ' ' ) {
-	 			return true;
-	 		}
-	 		n++;
-	 	}
+	 	if (data) {
+	 		// 获取字符串长度
+	 		var max = data.length;
+	 		
+		 	while (max > 0) {
+		 		max--;
+		 		// 如果数据不为空
+		 		if( data.substr(max,1) != ' ' ) {
+		 			return true;
+		 		}
+		 	}
+		 }
 
 	 	return false;
 	 }
